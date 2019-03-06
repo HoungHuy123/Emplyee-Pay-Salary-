@@ -8,7 +8,7 @@
 
 
 
-void readData(Person arr[], int size){
+int readData(Person arr[], int size){
     //int count =0;
     string firstname;
     string lastname;
@@ -33,6 +33,7 @@ void readData(Person arr[], int size){
     sizearr = i-1;
 
     infile.close();
+    return sizearr;
 };
 
 void writeData (int N, Person arr[]){
@@ -41,7 +42,7 @@ void writeData (int N, Person arr[]){
     int i=0;
     outfile.open("output.txt");
     
-    while (i != N){
+    while (i != N ){
         outfile << arr[i].fullName() << " " << arr[i].totalPay() << endl;
         i++;
     }
@@ -52,8 +53,8 @@ int main() {
 
 
 Person employee[20];
-int arr_size =20;
-readData(employee, arr_size);
+int arr_size;
+arr_size = readData(employee, arr_size);
 writeData(arr_size, employee);
 
 
