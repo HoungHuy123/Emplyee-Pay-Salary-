@@ -8,6 +8,12 @@ using namespace std;
 // string Person::getFirstName() {
 //     return firstName;
 // }
+    Person::Person(string fName, string lName, float rate, float hours){
+        firstName = fName;
+        lastName = lName;
+        payRate = rate;
+        hoursWorked = hours;
+    }
 
     Person::Person(){
         lastName = "";
